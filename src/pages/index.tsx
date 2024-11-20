@@ -45,12 +45,14 @@ const HomePage = () => {
         </Flex>
       </Center>
       <Center w={"100%"} mt={60}>
-        <Flex maw={1110}>
+        <Flex maw={1110} direction={{ base: "column", sm: "row" }}>
           <Image
             src={"/images/world_map.webp"}
             alt="world_map"
-            width={635}
+            width={1110}
             height={314}
+            style={{ width: "100%", height: "auto" }}
+            priority
           />
           <Box>
             <Text>Global Partner</Text>
@@ -81,7 +83,7 @@ const HomePage = () => {
           <Text mt={24} fz={32}>
             What Can We Do For You ?
           </Text>
-          <Flex mt={50} gap={30}>
+          <Flex mt={50} gap={30} wrap={"wrap"}>
             {[1, 2, 3].map((item) => (
               <Flex key={item} direction={"column"} maw={286}>
                 <Flex>

@@ -1,6 +1,5 @@
 import React from "react";
-import { Header } from "@components";
-import { Box } from "@mantine/core";
+import { Footer, Header } from "@components";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,10 +8,11 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   const { children } = props;
   return (
-    <Box>
+    <React.Fragment>
       <Header />
       {children}
-    </Box>
+      <Footer />
+    </React.Fragment>
   );
 };
 
